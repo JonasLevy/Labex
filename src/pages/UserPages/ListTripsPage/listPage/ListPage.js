@@ -1,24 +1,23 @@
 import Trip from "./Trip"
-import { useNavigate } from "react-router-dom"
 import { ContainerTripList } from "./styledTripList"
+import Header from "../../../../components/Header/Header"
+
+
+
 
 const ListPage = () => {
-    const navigate = useNavigate()
 
-    const goToApplication = () => {
-        navigate('/applicationtrip')
-    }
+    
 
-    const goBack = () => {
-        navigate(-1)
-    }
+    
 
     return (
         <ContainerTripList>
-           <h1> Lista de Viagens</h1>
+            < Header title="Lista de Viagens" />
+
             <div className="containerButton">
-                <button onClick={goToApplication}> Inscrever</button>
-                <button onClick={goBack}>Votar</button>
+                
+                
             </div>
             
             <div className="containerTrips">

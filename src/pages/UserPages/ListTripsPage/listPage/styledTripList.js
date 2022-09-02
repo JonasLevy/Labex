@@ -42,4 +42,16 @@ export const ContainerTripList = styled.div`
         box-sizing: border-box;
 
     }
+
+    @media(max-width: 900px) {
+        .containerTrips{
+            height: 80vh;
+            /* background-color: red; */
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 20px;
+            padding: 20px;
+        }
+    }
 `

@@ -6,6 +6,7 @@ import { goBack } from '../../../routers/Coordinator'
 import { useInput } from "../../../Hooks/useInput"
 import { useState } from "react"
 import axios from "axios"
+import Header from "../../../components/Header/Header"
 
 
 const Application = () => {
@@ -53,12 +54,15 @@ const Application = () => {
     console.log(form)
     return (
         <ContainerApplication>
-            <h1> Formulario de cadastro </h1>
+
+            < Header title={"Formulario de cadastro"}/>
+           
             <section>
                 <form onSubmit={onClickApplication}>
                     <select
                         onChange={onChangeViagem}
                         value={viagem}
+                        required
 
                     >
                         <option value='' disabled >Escolha uma viagem</option>
@@ -92,7 +96,7 @@ const Application = () => {
                         required
                     />
                     <input type="text"
-                        placeholder="Profição"
+                        placeholder="Profissão"
                         value={form.profession}
                         onChange={onChange}
                         name="profession"
@@ -118,7 +122,6 @@ const Application = () => {
                     </select>
                     <div className="conatinerButton">
                         <button>Aplicar-se</button>
-                        <button onClick={() => goBack(navigate)}>Votar</button>
                     </div>
                 </form>
             </section>
