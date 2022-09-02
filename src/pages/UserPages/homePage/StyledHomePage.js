@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import espace from "../../../Images/espace.jpg"
-import fontSpace from './spacerangergradital.ttf'
+import fontSpace from '../../../fonts/spacerangergradital.ttf'
 
 export const ContainerHomePage = styled.div`
 
@@ -80,6 +80,12 @@ export const ContainerHomePage = styled.div`
                     box-shadow: 1px  3px 3px #5522ff inset ;
                 }
             }
+        }
+    }
+
+    @media(max-width: 900px) {
+        .container{
+            background-color: red;
         }
     }
 `

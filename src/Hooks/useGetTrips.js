@@ -8,7 +8,7 @@ export const useGetTrips = () =>{
         axios("https://us-central1-labenu-apis.cloudfunctions.net/labeX/jonas-meneses-hooks/trips").then(resp =>{
             setTripList(resp.data.trips)
         })
-    }, [tripList])
+    }, [])
 
     return tripList
 }
